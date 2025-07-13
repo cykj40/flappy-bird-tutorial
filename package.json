@@ -1,0 +1,31 @@
+{
+  "name": "flappy-bird-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cykj40/flappy-bird-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cykj40/flappy-bird-tutorial/issues"
+  },
+  "homepage": "https://github.com/cykj40/flappy-bird-tutorial#readme",
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "vite": "7.0.4"
+  },
+  "dependencies": {
+    "excalibur": "0.30.3"
+  }
+}
