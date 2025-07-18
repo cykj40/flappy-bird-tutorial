@@ -30,4 +30,25 @@ export class Bird extends ex.Actor {
         }
     }
 
+    jumping = false;
+
+    private isInputActive(engine: ex.Engine) {
+        return (engine.input.keyboard.isHeld(ex.Keys.Space) ||
+            engine.input.pointers.isDown(0))
+    }
+
+    override onPostUpdate(engine: ex.Engine,): void {
+        if (!this.jumping && this.isInputActive(engine)) {
+            this.vel.y += -800;
+            this.jumping = true;
+        }
+        if (!this.isInputActive(engine)) {
+            this.jumping = false;
+        }
+
+        this.vel.y = ex.clamp(this.vel.y, -500, 500);
+
+        this.rotation = ex.vec(200, this.vel.y).toAngle();
+    }
+
 }
